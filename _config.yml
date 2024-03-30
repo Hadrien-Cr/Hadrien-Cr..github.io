@@ -199,7 +199,10 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
+  kaggle:
+    output: true
+    permalink: /:collection/:path/
+  DIR:
     output: true
     permalink: /:collection/:path/
   publications:

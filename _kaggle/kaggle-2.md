@@ -1,5 +1,5 @@
 ---
-title: "Train Your Own Stockfish NNUE ♟️"
+title: "Sustainable Urban Living 🏡"
 excerpt: "Second post on the activity report <br/><img src='/images/kaggle.png'>"
 collection: kaggle
 ---
