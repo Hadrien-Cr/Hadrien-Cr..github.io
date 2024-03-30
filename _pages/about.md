@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-This is the my homepage, where I share my work.
+This is my homepage, where I share my work.
 
 👨🏻‍💻 I’m a Master student at Centrale-Supélec.
 
