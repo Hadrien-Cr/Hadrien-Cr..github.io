@@ -1,6 +1,6 @@
 ---
 title: "Nelder-Mead Algorithm 📉"
-excerpt: "<img src='/images/DIR.png' width='400' height='200'> First post on Discover, Implement, Repeat <a href='https://pitch-century-cca.notion.site/Nelder-Mead-Algorithm-6b1971cb3c484d408e145de21bd560d4'> Nelder-Mead Algorithm 📉 </a>"
+excerpt: "<img src='/images/DIR.png' width='300' height='150'>  - First post on Discover, Implement, Repeat: <a href='https://pitch-century-cca.notion.site/Nelder-Mead-Algorithm-6b1971cb3c484d408e145de21bd560d4'> Nelder-Mead Algorithm 📉 </a>"
 
 collection: DIR
 ---

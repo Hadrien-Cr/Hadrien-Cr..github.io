@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-This is my homepage, where I share my work.
-
 👨🏻‍💻 I’m a Master student at Centrale-Supélec.
 
 🔬📚 I am a Data Science and AI Passionate.
@@ -16,9 +14,9 @@ This is my homepage, where I share my work.
 What is available in this page
 ======
 
-1. My Kaggle Activity Report: <img src='/images/kaggle.png' width='100' height='50'> \\
+1. <b> My Kaggle Activity Report: </b> </dl> </dl> <img src='/images/kaggle.png' width='80' height='50'> <br>
 I share everything I learned from my Kaggle competitions. 
-1. Discover, Implement & Repeat:  <img src='/images/DIR.png' width='350' height='150'>  \\ 
+1. <b> Discover, Implement & Repeat: </b>  </dl> </dl> <img src='/images/DIR.png' width='300' height='150'>  <br>
 In this series, I share all my favourite ML tools, make a brief introduction, and build my own version of it from scratch 
-1. My CV
+1. <b> My CV </b>
 
