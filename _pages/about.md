@@ -16,7 +16,9 @@ This is my homepage, where I share my work.
 What is available in this page
 ======
 
-1. My Kaggle Activity Report: I share all that I learned from my kaggle competitions.
-1. Discover, Implement & Repeat: In this series, I share all my favourite ML tools, make a brief introduction, and build my own version of it from scratch
+1. My Kaggle Activity Report: <img src='/images/kaggle.png' width='100' height='50'> \\
+I share everything I learned from my Kaggle competitions. 
+1. Discover, Implement & Repeat:  <img src='/images/DIR.png' width='500' height='200'>\\ I
+n this series, I share all my favourite ML tools, make a brief introduction, and build my own version of it from scratch 
 1. My CV
 
