@@ -1,7 +1,6 @@
 ---
 title: "Nelder Mead Algorithm 📉"
-excerpt: "Second post on Discover, Implement, Repeat <br/><img src='/images/DIR.png'>"
-collection: kaggle
+excerpt: "Second post on Discover, Implement, Repeat <br/><img src='/images/DIR.png' width='100' height='50'>
+               https://youtube.com "
+collection: DIR
 ---
-
-This is an item in your DIR. https://youtube.com

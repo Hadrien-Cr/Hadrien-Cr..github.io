@@ -1,7 +1,7 @@
 ---
-title: "Sustainable Urban Living 🏡"
-excerpt: "Second post on the activity report <br/><img src='/images/kaggle.png'>"
-collection: kaggle
+title: "Random Forest Regressor 🌳"
+excerpt: "First post on Discover, Implement, Repeat <br/><img src='/images/DIR.png' width='100' height='50'>"
+collection: DIR
 ---
 
-This is an item in your kaggle. 
+This is an item in your DIR. https://youtube.com
