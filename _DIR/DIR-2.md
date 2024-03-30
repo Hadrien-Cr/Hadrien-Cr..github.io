@@ -4,4 +4,3 @@ excerpt: "First post on Discover, Implement, Repeat <br/><img src='/images/DIR.p
 collection: DIR
 ---
 
-This is an item in your DIR. https://youtube.com
