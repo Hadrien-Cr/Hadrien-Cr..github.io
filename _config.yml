@@ -21,7 +21,7 @@ repository               : "Hadrien-Cr/Hadrien-Cr..github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "photo_couleurs.png"
+  avatar           : "photo-couleurs.png"
   name             : "Hadrien Crassous"
   pronouns         : # example: "she/her"  
   bio              : "Master Student at Centrale-Supélec"
@@ -47,7 +47,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
