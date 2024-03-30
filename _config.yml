@@ -21,12 +21,12 @@ repository               : "Hadrien-Cr/Hadrien-Cr..github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "photo-couleurs.png"
+  avatar           : "profile.png"
   name             : "Hadrien Crassous"
   pronouns         : # example: "she/her"  
   bio              : "Master Student at Centrale-Supélec"
   location         : "France"
-  employer         : "Centrale-Supélec & Univery of Trento"
+  employer         : "Centrale-Supélec & University of Trento"
   uri              : # URL
   email            : "crassous.hadrien@gmail.com" 
 
@@ -64,7 +64,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Replace this with your X / Twitter handle
+  twitter          :  # Replace this with your X / Twitter handle
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
