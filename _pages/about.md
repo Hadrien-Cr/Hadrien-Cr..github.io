@@ -18,7 +18,7 @@ What is available in this page
 
 1. My Kaggle Activity Report: <img src='/images/kaggle.png' width='100' height='50'> \\
 I share everything I learned from my Kaggle competitions. 
-1. Discover, Implement & Repeat:  <img src='/images/DIR.png' width='500' height='200'>\\ I
-n this series, I share all my favourite ML tools, make a brief introduction, and build my own version of it from scratch 
+1. Discover, Implement & Repeat:  <img src='/images/DIR.png' width='350' height='150'>\\ 
+In this series, I share all my favourite ML tools, make a brief introduction, and build my own version of it from scratch 
 1. My CV
 
