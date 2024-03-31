@@ -200,7 +200,7 @@ kramdown:
 # Collections
 collections:
   kaggle:
-    output: true
+    output: false
     permalink: /:collection/:path/
   DIR:
     output: true
