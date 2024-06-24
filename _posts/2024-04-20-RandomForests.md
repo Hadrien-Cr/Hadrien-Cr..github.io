@@ -1,15 +1,13 @@
 ---
 title: "Random Forests 🌳"
-date: 2024-03-9
+date: 2024-04-20
 permalink: /posts/2024/03/RandomForests/
 excerpt: "In this post, I showcase one of my favorite ML models, explain the gist of the algorithm, share my implementation and compare its performances with benchmark references."
 ---
 
+# <img src="/images/RandomForests/RF1.jpeg" width="900" height="200">
+# <img src="/images/DIR.png" width="300" height="70" style="font-size: 15px;">
 
-# Random Forests 🌳
-
-# <img src="/images/RandomForests/RF1.jpeg" width="500" height="200">
-# <img src="/images/DIR.png" width="400" height="100" style="font-size: 15px;">
 
 In this post, I showcase one of my favorite ML models, explain the gist of the algorithm, share my implementation and compare its performances with benchmark references.
 
@@ -22,7 +20,7 @@ The Random Forest model is a versatile and robust machine learning algorithm tha
 
 A decision tree is a simple model, quite optimistic, that hopes to classify a sample, only by asking this sample binary questions: For instance, one can categorize species into families by asking binary questions, thus one can build an efficient decision tree for this classification task.
 
-<img src="/images/RandomForests/RF2.png" alt="partial decision tree for classifying species" width="500" height="250" class="jop-noMdConv">
+<img src="/images/RandomForests/RF2.png" alt="partial decision tree for classifying species" width="400" height="250" class="jop-noMdConv">
 
 partial decision tree for classifying species
 
@@ -75,9 +73,9 @@ $$
 
 *For example if the parent node has samples of 2 equiprobable classses*
 
-*(ie $Gini(\text{parent node}) = 0.5$ ) and if the split separate perfectly the 2 classes*
+(ie $Gini(\text{parent node}) = 0.5$ ) and if the split separate perfectly the 2 classes
 
-*(ie $Gini(\text{left node}) = Gini(\text{right node}=0)$, **then the reduction in impurity is (0.5).***
+(ie $Gini(\text{left node}) = Gini(\text{right node}=0)$), **then the reduction in impurity is (0.5).**
 
 *But if the split does not separate the 2 classes at all*
 
@@ -91,7 +89,7 @@ $$
 
 3 - For predicting the class of a test sample, the sample goes through all the trees, and the prediction is made by aggregating the votes to a majority vote. The votes can also be interpreted as a probibility: if 80 % of trees vote “class A” and the others voter “class B”, the probability of class.
 
-![summary of the algorithm](/images/RandomForests/RF6.png)
+<img src="/images/RandomForests/RF6.png" alt="partial decision tree for classifying species" width="500" height="350" >
 
 summary of the algorithm
 
@@ -147,13 +145,13 @@ I initialy misinterpreted the algorithm: instead a randomly drawing $m$ features
 
 The first test I conducted was the task of classifying these 1000 of samples of 3 “[blobs](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html#sklearn.datasets.make_blobs)” (the set being half for training and half for testing).
 
-![Illustration of the classification task](/images/RandomForests/RF8.png)
+<img src="/images/RandomForests/RF8.png"  width="500" height="350" >
 
 Illustration of the classification task
 
 The models are the Random Forest Classifier from sklearn, my custom Random Forest Classifier, and a single custom Decision Tree Classifier (parameters are max_features=1, n_estimators=100, max_depth=2, min_samples_split=2, min_samples_leaf=1)
 
-![Accuracy of each model on the task (averaged on 10 experiments)](/images/RandomForests/RF10.png)
+<img src="/images/RandomForests/RF10.png"  width="500" height="250" >
 
 Accuracy of each model on the task (averaged on 10 experiments)
 
@@ -163,11 +161,12 @@ Accuracy of each model on the task (averaged on 10 experiments)
 
 To make a more formal benchmark, let’s try to reproduce one of the results from the publication [Breiman, L. Random Forests. Machine Learning 45, 5–32 (2001)](https://doi.org/10.1023/A:1010933404324). I used [the following dataset](https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original) of breast cancer diagnosis (the same one used in the publication)
 
-![Capture d'écran 2024-04-02 170140.png](/images/RandomForests/RF11.png)
+<img src="/images/RandomForests/RF11.png"  width="500" height="100" >
 
 Here are the results presented in the article:
 
-![Test errors in percentage.](/images/RandomForests/RF13.png)
+<img src="/images/RandomForests/RF13.png"  width="520" height="100" >
+
 
 Test errors in percentage.
 
@@ -175,7 +174,8 @@ The test set is 10% of the original dataset, drawn randomly. There is no limit o
 
 Here are the results of he Random Forest Classifier from sklearn, my custom Random Forest Classifier, and a single custom Decision Tree Classifier compared to the benchmark.
 
-![The experiment is repeated 50 times on different seeds.](/images/RandomForests/RF12.png)
+<img src="/images/RandomForests/RF12.png"  width="500" height="250" >
+
 
 The experiment is repeated 50 times on different seeds.
 

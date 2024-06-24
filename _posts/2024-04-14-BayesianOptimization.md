@@ -1,14 +1,13 @@
 ---
-title: "Bayesian Optimization"
+title: "Bayesian Optimization 📉"
 date: 2024-04-14
 permalink: /posts/2024/04/BayesianOptimization/
 excerpt: "In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it."
 ---
 
-# Bayesian Optimization 📉
 
-# <img src="/images/BayesianOpt/BayesianOpt1.jpeg" width="500" height="200">
-# <img src="/images/DIR.png" width="400" height="100" style="font-size: 15px;">
+# <img src="/images/BayesianOpt/BayesianOpt1.jpeg" width="900" height="200">
+# <img src="/images/DIR.png" width="300" height="70" style="font-size: 15px;">
 
 In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it.
 * * *
@@ -79,34 +78,24 @@ An acquisition function should only take as an input the current distribution es
 
 Here is a list of common acquisition functions:
 
-$$\text{USB (Upper Confidence Bound), the most optimistic}
- \\
-    Score: USB(x) = \mu(x) + k \sigma (x) 
- \\
- \text{ Here } \mu (x) \text{ is the mean prediction from the model at point } x, 
- \\  \sigma (x) \text{ is the standard deviation of the prediction at point } x,  
- \\ k \text{ is a trade-off parameter that balances exploration and exploitation.} \\ $$
+$$\text{USB (Upper Confidence Bound), the most optimistic}$$
 
+$$ Score: USB(x) = \mu(x) + k \sigma (x) $$
 
+$$\text{ Here } \mu (x) \text{ is the mean prediction from the model at point } x, $$
+$$\sigma (x) \text{ is the standard deviation of the prediction at point } x,  k \text{ is a trade-off parameter that balances exploration and exploitation.} $$
 
-$$\text{LSB (Lower Confidence Bound), similar, but pessimistic }
- \\
-    Score: LSB(x) = \mu(x) - k \sigma (x)$$
+$$\text{LSB (Lower Confidence Bound), similar, but pessimistic }$$
+$$ Score: LSB(x) = \mu(x) - k \sigma (x)$$
 
-$$\text{PI: Probability Improvement}  
- \\  
- \text{This acquisition function measures the probability  that the function value } \\ \text{at a given point  is better than the current best known function value plus a margin of } k \\
-    Score: PI(x) = P(f(x) + k \cdot \sigma (x))=  \Phi(-\frac{f(x_{best}) + k - \mu(x)}{\sigma(x)})   
- \\  
-\Phi \text{ is the normal cumulative distribution function}$$
+$$\text{PI: Probability Improvement}$$
+$$\text{This acquisition function measures the probability  that the function value }  \text{at a given point  is better than the current best known function value plus a margin of } k$$
 
-$$
-\\ 
-\text{EI: Expected Improvement}  
- \\  
- \text{This acquisition function measures the expected improvement  } \\ \text{at a given point } x \\
-    Score: EI(x) = (\mu(x) - f(x_{best}) - k)\Phi(\frac{\mu(x) - f(x_{best}) - k}{\sigma(x)})\\
-$$
+$$ Score: PI(x) = P(f(x) + k \cdot \sigma (x))=  \Phi(-\frac{f(x_{best}) + k - \mu(x)}{\sigma(x)}) \Phi \text{ is the normal cumulative distribution function} $$
+
+$$\text{EI: Expected Improvement}  $$
+$$\text{This acquisition function measures the expected improvement  } \\ \text{at a given point } x \\
+    Score: EI(x) = (\mu(x) - f(x_{best}) - k)\Phi(\frac{\mu(x) - f(x_{best}) - k}{\sigma(x)})\\ $$
 * * *
 ## 👨‍💻My implementation [(Source Code)](https://github.com/Hadrien-Cr/Discover-Implement-Repeat/tree/main/Optimization/BAYESIAN_OPT)
 
