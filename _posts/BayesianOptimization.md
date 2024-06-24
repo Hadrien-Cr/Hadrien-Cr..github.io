@@ -1,8 +1,8 @@
 ---
 title: "Bayesian Optimization"
-permalink: /DIR/BayesianOptimization/
+date: 2024-04-14
+permalink: /posts/2024/04/BayesianOptimization/
 excerpt: "In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it."
-collection: DIR
 ---
 
 # Bayesian Optimization 📉
@@ -32,7 +32,7 @@ At the beginning of the algorithm, the points to evaluate are drawn randomly in 
 At each step, given the known values of the function, a gaussian process model is fitted, which corresponds to a distribution guess of the possible values that **$f(x)$** can take, at points where $f$ has not been evaluated yet.
 
 
-# <img src="/images/BayesianOpt/BayesianOpt2.png" width="800" height="300">
+# <img src="/images/BayesianOpt/BayesianOpt2.png" width="700" height="300">
 
 
 The shape of the distribution is controlled by the kernel of the gaussian process model, which can allow high variations, or can enforce the estimate to be smoother to avoid overfitting a noisy objective function
