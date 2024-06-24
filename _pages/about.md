@@ -14,9 +14,8 @@ redirect_from:
 What is available in my site:
 ======
 
-1. <b> My Kaggle Activity Report: </b>     <space>  <space>    <img src='/images/kaggle.png' width='80' height='50'> <br>
-I share everything I learned from my Kaggle competitions. 
-1. <b> Discover, Implement & Repeat: </b>     <space>  <space>    <img src='/images/DIR.png' width='250' height='120'>  <br>
-In this series, I share all my favourite ML tools, provide an in-depth presentation, and construct my own version from scratch.
+1. <b> My portfolio </b>
+1. <b> Discover, Implement & Repeat: </b>     <space>  <space>    <img src='/images/DIR.png' width='220' height='120'>  <br>
+In these posts, I share all my favourite ML tools, provide an in-depth presentation, and construct my own version from scratch.
 1. <b> My CV </b>
 
