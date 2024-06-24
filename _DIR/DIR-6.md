@@ -7,8 +7,8 @@ collection: DIR
 
 # Bayesian Optimization 📉
 
-# <img src="/images\BayesianOpt\BayesianOpt1.jpeg" width="500" height="200">
-# <img src="/images\DIR.png" width="400" height="100" style="font-size: 15px;">
+# <img src="/images/BayesianOpt/BayesianOpt1.jpeg" width="500" height="200">
+# <img src="/images/DIR.png" width="400" height="100" style="font-size: 15px;">
 
 In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it.
 * * *
