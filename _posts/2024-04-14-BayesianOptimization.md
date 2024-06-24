@@ -26,9 +26,9 @@ It requires very few assumptions on the objective function and it is designed to
 
 ### Step by step
 
-At the beginning of the algorithm, the points to evaluate are drawn randomly in the domain of the objective function $f$, with an arbitrary prior.
+At the beginning of the algorithm, the points to evaluate are drawn randomly in the domain of the objective function $$f$$, with an arbitrary prior.
 
-At each step, given the known values of the function, a gaussian process model is fitted, which corresponds to a distribution guess of the possible values that **$f(x)$** can take, at points where $f$ has not been evaluated yet.
+At each step, given the known values of the function, a gaussian process model is fitted, which corresponds to a distribution guess of the possible values that **$$f(x)$$** can take, at points where $$f$$ has not been evaluated yet.
 
 
 # <img src="/images/BayesianOpt/BayesianOpt2.png" width="700" height="300">
@@ -36,7 +36,7 @@ At each step, given the known values of the function, a gaussian process model i
 
 The shape of the distribution is controlled by the kernel of the gaussian process model, which can allow high variations, or can enforce the estimate to be smoother to avoid overfitting a noisy objective function
 
-Given these distributions, the zone where to sample $f$ on the next step is determine. Both the lack of information about a zone and the performance of the last points are taken into account. each point of the domain is granted an “acquisition score”, given an arbitrary method that should strike ablaance between the exploration (visit the least visited zones) and the performance (visit the zones where the estimate of $f$ is maximized)
+Given these distributions, the zone where to sample $$f$$ on the next step is determine. Both the lack of information about a zone and the performance of the last points are taken into account. each point of the domain is granted an “acquisition score”, given an arbitrary method that should strike ablaance between the exploration (visit the least visited zones) and the performance (visit the zones where the estimate of $$f$$ is maximized)
 
 Here is the pseudo code:
 
@@ -74,7 +74,7 @@ Returns:
 
 ### What acquisition functions to choose ?
 
-An acquisition function should only take as an input the current distribution estimates of the functions values. A simple way is to value the zones of the domain where the estimate $\mu (x)$ is high, but the score should also be high if the estimate is uncertain.
+An acquisition function should only take as an input the current distribution estimates of the functions values. A simple way is to value the zones of the domain where the estimate $$\mu (x)$$ is high, but the score should also be high if the estimate is uncertain.
 
 Here is a list of common acquisition functions:
 
