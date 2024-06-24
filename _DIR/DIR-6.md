@@ -7,10 +7,8 @@ collection: DIR
 
 # Bayesian Optimization 📉
 
-# <img src="../_resources/BayesianOpt1.jpeg" alt="BayesianOpt1.jpeg" width="500" height="200">
-
-
-# <img src="../_resources/DIR.png" alt="DIR.png" width="204" height="43" style="font-size: 15px;" class="jop-noMdConv">
+# <img src="/images\BayesianOpt\BayesianOpt1.jpeg" width="500" height="200">
+# <img src="/images\DIR.png" width="400" height="100" style="font-size: 15px;">
 
 In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it.
 * * *
@@ -33,7 +31,9 @@ At the beginning of the algorithm, the points to evaluate are drawn randomly in 
 
 At each step, given the known values of the function, a gaussian process model is fitted, which corresponds to a distribution guess of the possible values that **$f(x)$** can take, at points where $f$ has not been evaluated yet.
 
-![gaussain_process.png](../_resources/BayesianOpt2.png)
+
+# <img src="/images/BayesianOpt/BayesianOpt2.png" width="800" height="300">
+
 
 The shape of the distribution is controlled by the kernel of the gaussian process model, which can allow high variations, or can enforce the estimate to be smoother to avoid overfitting a noisy objective function
 
@@ -155,10 +155,10 @@ My custom random regressor ended being way slower than the one from scikit-learn
 
 Search in a 1-dimensional domain, with kernel RBF(0.2), k = 0.1, acquisition function EI:
 
-![the upper and lower bounds form a 99% confidence interval on the surrogate function ](../_resources/BayesianOpt3.gif)
+![the upper and lower bounds form a 99% confidence interval on the surrogate function ](/images/BayesianOpt/BayesianOpt3.gif)
 
 the upper and lower bounds form a 99% confidence interval on the surrogate function
 
 Search in a 2-dimensional domain, with kernel RBF(0.5), k = 0.1, acquisition function EI:
 
-![progress_gif_2d.gif](../_resources/BayesianOpt4.gif)
+![progress_gif_2d.gif](/images/BayesianOpt/BayesianOpt4.gif)
