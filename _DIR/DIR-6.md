@@ -1,6 +1,6 @@
 ---
 title: "Bayesian Optimization"
-permalink: /dir/BayesianOptimization/
+permalink: /DIR/BayesianOptimization/
 excerpt: "In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it."
 collection: DIR
 ---
