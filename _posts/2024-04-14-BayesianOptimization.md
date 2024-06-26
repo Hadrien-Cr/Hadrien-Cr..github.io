@@ -10,7 +10,7 @@ excerpt: "In this post, I present the Bayesian Optimization algorithm, explain w
 
 In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it.
 
-* * *
+
 
 ## 📰 Quick Presentation of the Tool
 
@@ -18,7 +18,7 @@ Bayesian Optimization is an optimization algorithm that works by iteratively app
 
 It requires very few assumptions on the objective function and is designed to achieve high efficiency for objective functions with a low-dimensional domain but large evaluation complexity.
 
-* * *
+
 
 ## 🔬 Details on the Tool
 
@@ -48,45 +48,45 @@ Here is a list of common acquisition functions:
 
 - **UCB (Upper Confidence Bound):** The most optimistic.
   
-  \[
+  $$
   \text{Score: } UCB(x) = \mu(x) + k \sigma(x)
-  \]
+  $$
 
   Where:
-  \[
+  $$
   \mu(x) \text{ is the mean prediction from the model at point } x,
-  \]
-  \[
+  $$
+  $$
   \sigma(x) \text{ is the standard deviation of the prediction at point } x,
-  \]
-  \[
+  $$
+  $$
   k \text{ is a trade-off parameter that balances exploration and exploitation.}
-  \]
+  $$
 
 - **LCB (Lower Confidence Bound):** Similar, but pessimistic.
   
-  \[
+  $$
   \text{Score: } LCB(x) = \mu(x) - k \sigma(x)
-  \]
+  $$
 
 - **PI (Probability of Improvement):** Measures the probability that the function value at a given point is better than the current best-known function value plus a margin of \( k \).
 
-  \[
+  $$
   \text{Score: } PI(x) = \Phi\left(\frac{f(x_{best}) + k - \mu(x)}{\sigma(x)}\right)
-  \]
+  $$
 
   Where:
-  \[
+  $$
   \Phi \text{ is the normal cumulative distribution function.}
-  \]
+  $$
 
 - **EI (Expected Improvement):** Measures the expected improvement at a given point \( x \).
 
-  \[
+  $$
   \text{Score: } EI(x) = (\mu(x) - f(x_{best}) - k) \Phi\left(\frac{\mu(x) - f(x_{best}) - k}{\sigma(x)}\right)
-  \]
+  $$
 
-* * *
+
 
 ## 👨‍💻 My Implementation [(Source Code)](https://github.com/Hadrien-Cr/Discover-Implement-Repeat/tree/main/Optimization/BAYESIAN_OPT)
 
@@ -98,7 +98,7 @@ Here is the pseudo code on how to fit and predict with a Gaussian Process Regres
 
 My custom random regressor ended up being slower than the one from scikit-learn, especially during the prediction step.
 
-* * *
+
 
 ## 👀 Visualizing the Search
 
@@ -115,5 +115,3 @@ The upper and lower bounds form a 99% confidence interval on the surrogate funct
 Search in a 2-dimensional domain, with kernel \( RBF(0.5) \), \( k = 0.1 \), acquisition function EI:
 
 ![2D Search Visualization](/images/BayesianOpt/BayesianOpt4.gif)
-
-* * *
