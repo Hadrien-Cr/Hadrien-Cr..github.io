@@ -1,7 +1,7 @@
 ---
 title: "Random Forests 🌳"
-date: 2024-04-20
-permalink: /posts/2024/03/RandomForests/
+date: 2024-04-14
+permalink: /posts/2024/04/RandomForests/
 excerpt: "In this post, I showcase one of my favorite ML models, explain the gist of the algorithm, share my implementation and compare its performances with benchmark references."
 ---
 
@@ -47,13 +47,15 @@ To do so, here is the procedure:
 
 *For binary trees, the reduction in impurity is computed with the formula:*
 
-\[ \Delta Gini = Gini(\text{parent node}) - \alpha Gini(\text{left node}) - (1-\alpha) Gini(\text{right node}) \quad (\alpha \text{ is the share of the samples going to the left node}) \]
+$$
+\Delta Gini = Gini(\text{parent node}) - \alpha Gini(\text{left node}) - (1-\alpha) Gini(\text{right node}) \quad (\alpha \text{ is the share of the samples going to the left node}) 
+$$
 
 *The [Gini Index](https://en.wiktionary.org/wiki/Gini_coefficient#English) is a metrics of the impurity of a node.*
 
-*For example, if the parent node has samples of 2 equiprobable classes (i.e.,  Gini(\text{parent node}) = 0.5 ), and if the split separates the 2 classes perfectly (i.e.,  Gini(\text{left node}) = Gini(\text{right node}) = 0 ), then the reduction in impurity is  0.5 .*
+<p>For example, if the parent node has samples of 2 equiprobable classes (i.e.,  Gini(\text{parent node}) = 0.5 ), and if the split separates the 2 classes perfectly (i.e.,  Gini(\text{left node}) = Gini(\text{right node}) = 0 ), then the reduction in impurity is  0.5 .</p>
 
-*But if the split does not separate the 2 classes at all (i.e.,  Gini(\text{left node}) = Gini(\text{right node}) = Gini(\text{parent node}) = 0.5 ), then the reduction in impurity is  0 .*
+<p>But if the split does not separate the 2 classes at all (i.e.,  Gini(\text{left node}) = Gini(\text{right node}) = Gini(\text{parent node}) = 0.5 ), then the reduction in impurity is  0 .</p>
 
 **Note that the computation of the impurity can change with the criterion chosen.**
 

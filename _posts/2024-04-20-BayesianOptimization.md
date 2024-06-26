@@ -1,6 +1,6 @@
 ---
 title: "Bayesian Optimization 📉"
-date: 2024-04-14
+date: 2024-04-20
 permalink: /posts/2024/04/BayesianOptimization/
 excerpt: "In this post, I present the Bayesian Optimization algorithm, explain why it is so useful and share my implementation of it."
 ---

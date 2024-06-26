@@ -22,7 +22,7 @@ Main source: Chapter 2 of [Reinforcement Learning: An Introduction by Richard S.
 
 Bandit algorithms belong to a class of reinforcement learning algorithms used to solve a problem known as the **bandit problem**. In this scenario:
 
-An agent faces a set of \( k \) different actions. After choosing an action, the agent receives a reward from a stationary probability distribution associated with that action.
+<p>An agent faces a set of k different actions. After choosing an action, the agent receives a reward from a stationary probability distribution associated with that action.</p>
 
 The goal for the agent is to maximize the total reward accumulated over a series of steps (e.g., 1000 actions).
 
@@ -40,11 +40,11 @@ Bandit problems are fundamental in reinforcement learning as many real-world pro
 
 <p>Let \( A_t \) denote the action selected at step \( t \),</p>
 <p>Let \( R_t \) denote the corresponding reward,</p>
-<p>\( q_*(a) = \mathbb{E}[R_t \mid A_t=a] \) represents the expected reward for action \( a \), also known as the *value* of \( a \) (which remains constant due to the stationary assumption).</p>
+<p>\( q_*(a) = \mathbb{E}[R_t \mid A_t=a] \) represents the expected reward for action \( a \), also known as the value of \( a \) (which remains constant due to the stationary assumption).</p>
 
 <img src="/images/BanditAlg/Bandit3.png" width="500" height="350">
 
-<p>\( Q_t(a) \) is the estimated value of action \( a \) at step \( t \), which should converge to \( q_*(a) \) over time.A **greedy move** selects the action that maximizes \( Q_t(a) \).An **exploratory move** selects an action that is not greedy.</p>
+<p>\( Q_t(a) \) is the estimated value of action \( a \) at step \( t \), which should converge to \( q_*(a) \) over time.A greedy move selects the action that maximizes \( Q_t(a) \). An exploratory move selects an action that is not necessarily greedy.</p>
 
 ### Epsilon-Greedy Action Selection
 
@@ -83,13 +83,13 @@ $$
 
 ### Tips and Tricks
 
-- **Optimistic Initial Values:** Starting with high initial estimates encourages exploration, which is crucial for methods like \( \varepsilon \)-greedy.
+<p>Optimistic Initial Values: Starting with high initial estimates encourages exploration, which is crucial for methods like \( \varepsilon \)-greedy.</p>
 
 ## 👨‍💻 My Implementation ([source code](https://github.com/Hadrien-Cr/Discover-Implement-Repeat/tree/main/Reinforcement_Learning/Bandit_Algorithms))
 
 
 
-<p>I implemented an \( \epsilon \)-greedy agent, a UCB agent, and a gradient bandit algorithm agent. Each agent is encapsulated in a class and includes a method to play a given bandit problem, updating its history of actions and rewards.</p>
+<p> I implemented an \( \epsilon \)-greedy agent, a UCB agent, and a gradient bandit algorithm agent. Each agent is encapsulated in a class and includes a method to play a given bandit problem, updating its history of actions and rewards.</p>
 
 I also developed a k-armed Bandit Problem class, although it currently only supports stationary reward distributions.
 
@@ -97,7 +97,8 @@ I also developed a k-armed Bandit Problem class, although it currently only supp
 
 
 
-<p>The benchmark used in [Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-book-2nd.html) involves a 10-armed bandit problem where \( q_*(1), ..., q_*(10) \) are drawn from a normal distribution with mean 0 and variance 1. The reward for each action follows a normal distribution with mean \( q_*(a) \) and variance 1.</p>
+I used the benchmark described in the book [Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-book-2nd.html). 
+<p>It involves a 10-armed bandit problem where \( q_*(1), ..., q_*(10) \) are drawn from a normal distribution with mean 0 and variance 1. The reward for each action follows a normal distribution with mean \( q_*(a) \) and variance 1.</p>
 
 Results are averaged over 2000 independent runs of this test bed to reduce variance.
 
@@ -109,4 +110,6 @@ To evaluate a model, the average reward over the first 1000 steps of learning is
 
 The experiments exhibit high variance, necessitating the 2000 runs to achieve reliable results. Conducting these runs took approximately 1 hour on my CPU.
 
-![Results of my experiments](/images/BanditAlg/Bandit6.png){: width="400" height="350"}
+<div style="padding-left: 80px;">
+  <img src="/images/BanditAlg/Bandit6.png" alt="Results of my experiments" width="400" height="350">
+</div>
