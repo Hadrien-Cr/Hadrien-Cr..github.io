@@ -24,15 +24,15 @@ It requires very few assumptions on the objective function and is designed to ac
 
 ### Step by Step
 
-At the beginning of the algorithm, points to evaluate are drawn randomly within the domain of the objective function \( f \), starting with an arbitrary prior.
+At the beginning of the algorithm, points to evaluate are drawn randomly within the domain of the objective function $ f $, starting with an arbitrary prior.
 
-At each step, given the known values of the function, a Gaussian Process model is fitted, representing a distribution guess of the possible values that \( f(x) \) can take at points where \( f \) has not yet been evaluated.
+At each step, given the known values of the function, a Gaussian Process model is fitted, representing a distribution guess of the possible values that $ f(x) $ can take at points where $ f $ has not yet been evaluated.
 
 # <img src="/images/BayesianOpt/BayesianOpt2.png" width="700" height="300">
 
 The shape of the distribution is controlled by the kernel of the Gaussian Process model. This kernel can either allow high variations or enforce the estimate to be smoother to avoid overfitting a noisy objective function.
 
-Given these distributions, the zone where to sample \( f \) next is determined. Both the lack of information about a zone and the performance of recent points are considered. Each point in the domain is granted an “acquisition score,” given by an arbitrary method that should strike a balance between exploration (visiting the least explored zones) and exploitation (visiting zones where the estimate of \( f \) is maximized).
+Given these distributions, the zone where to sample $ f $ next is determined. Both the lack of information about a zone and the performance of recent points are considered. Each point in the domain is granted an “acquisition score,” given by an arbitrary method that should strike a balance between exploration (visiting the least explored zones) and exploitation (visiting zones where the estimate of $ f $ is maximized).
 
 Here is the pseudo code:
 
@@ -42,7 +42,7 @@ Here is the pseudo code:
 
 ### What Acquisition Functions to Choose?
 
-An acquisition function should only take the current distribution estimates of the function's values as input. A simple approach is to value the zones of the domain where the estimate \( \mu(x) \) is high, but the score should also be high if the estimate is uncertain.
+An acquisition function should only take the current distribution estimates of the function's values as input. A simple approach is to value the zones of the domain where the estimate $ \mu(x) $ is high, but the score should also be high if the estimate is uncertain.
 
 Here is a list of common acquisition functions:
 
@@ -69,7 +69,7 @@ Here is a list of common acquisition functions:
   \text{Score: } LCB(x) = \mu(x) - k \sigma(x)
   $$
 
-- **PI (Probability of Improvement):** Measures the probability that the function value at a given point is better than the current best-known function value plus a margin of \( k \).
+- **PI (Probability of Improvement):** Measures the probability that the function value at a given point is better than the current best-known function value plus a margin of $ k $.
 
   $$
   \text{Score: } PI(x) = \Phi\left(\frac{f(x_{best}) + k - \mu(x)}{\sigma(x)}\right)
@@ -80,7 +80,7 @@ Here is a list of common acquisition functions:
   \Phi \text{ is the normal cumulative distribution function.}
   $$
 
-- **EI (Expected Improvement):** Measures the expected improvement at a given point \( x \).
+- **EI (Expected Improvement):** Measures the expected improvement at a given point $ x $.
 
   $$
   \text{Score: } EI(x) = (\mu(x) - f(x_{best}) - k) \Phi\left(\frac{\mu(x) - f(x_{best}) - k}{\sigma(x)}\right)
@@ -104,7 +104,7 @@ My custom random regressor ended up being slower than the one from scikit-learn,
 
 ### 1-Dimensional Domain
 
-Search in a 1-dimensional domain, with kernel \( RBF(0.2) \), \( k = 0.1 \), acquisition function EI:
+Search in a 1-dimensional domain, with kernel $ RBF(0.2) $, $ k = 0.1 $, acquisition function EI:
 
 ![1D Search Visualization](/images/BayesianOpt/BayesianOpt3.gif)
 
@@ -112,6 +112,6 @@ The upper and lower bounds form a 99% confidence interval on the surrogate funct
 
 ### 2-Dimensional Domain
 
-Search in a 2-dimensional domain, with kernel \( RBF(0.5) \), \( k = 0.1 \), acquisition function EI:
+Search in a 2-dimensional domain, with kernel $ RBF(0.5) $, $ k = 0.1 $, acquisition function EI:
 
 ![2D Search Visualization](/images/BayesianOpt/BayesianOpt4.gif)

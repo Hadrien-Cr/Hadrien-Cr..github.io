@@ -26,7 +26,7 @@ The algorithm applies a Bagging (bootstrap aggregation (Breiman 1994)) of decisi
 
 This is the general form of bagging:
 
-1. Repeatedly draw, **with replacement,** \( n \leq N \) samples from the \( N \) samples. (bootstraping)
+1. Repeatedly draw, **with replacement,** $ n \leq N $ samples from the $ N $ samples. (bootstraping)
 2. For each set of samples, estimate a statistic (for example, an estimated class).
 3. The aggregated estimate is the mean of the individual estimates.
 
@@ -36,12 +36,12 @@ The random forest algorithm is an extension of the bagging method as it utilizes
 
 ### **Algorithm:**
 
-1. Repeatedly draw, **with replacement,** \( n \leq N \) samples. Then determine the best Decision tree Classifier corresponding.
+1. Repeatedly draw, **with replacement,** $ n \leq N $ samples. Then determine the best Decision tree Classifier corresponding.
 
 To do so, here is the procedure:
 
-- The decision tree is trained using the \( m \) attributes and the \( n \) samples. The root node represents the origin of the process, where all samples are asked the same binary question o (the split).
-- For each node, search among \( m \) randomly drawn attributes for the best split of the data to maximize the **reduction in impurity.**
+- The decision tree is trained using the $ m $ attributes and the $ n $ samples. The root node represents the origin of the process, where all samples are asked the same binary question o (the split).
+- For each node, search among $ m $ randomly drawn attributes for the best split of the data to maximize the **reduction in impurity.**
 
 ![example of a trained decision tree able to predict if a passenger of the Titanic is likely to survive](/images/RandomForests/RF4.png){: width="400" height="250"}
 
@@ -51,13 +51,13 @@ To do so, here is the procedure:
 
 *The [Gini Index](https://en.wiktionary.org/wiki/Gini_coefficient#English) is a metrics of the impurity of a node.*
 
-*For example, if the parent node has samples of 2 equiprobable classes (i.e., \( Gini(\text{parent node}) = 0.5 \)), and if the split separates the 2 classes perfectly (i.e., \( Gini(\text{left node}) = Gini(\text{right node}) = 0 \)), then the reduction in impurity is \( 0.5 \).*
+*For example, if the parent node has samples of 2 equiprobable classes (i.e., $ Gini(\text{parent node}) = 0.5 $), and if the split separates the 2 classes perfectly (i.e., $ Gini(\text{left node}) = Gini(\text{right node}) = 0 $), then the reduction in impurity is $ 0.5 $.*
 
-*But if the split does not separate the 2 classes at all (i.e., \( Gini(\text{left node}) = Gini(\text{right node}) = Gini(\text{parent node}) = 0.5 \)), then the reduction in impurity is \( 0 \).*
+*But if the split does not separate the 2 classes at all (i.e., $ Gini(\text{left node}) = Gini(\text{right node}) = Gini(\text{parent node}) = 0.5 $), then the reduction in impurity is $ 0 $.*
 
 **Note that the computation of the impurity can change with the criterion chosen.**
 
-- The criterion to stop splitting a node (making it a leaf node) is either hitting **maximum depth** of the decision tree, or **running short of samples** on the node, or the \( m \) features drawn are not able to split the samples (the samples are identical with respect to the features).
+- The criterion to stop splitting a node (making it a leaf node) is either hitting **maximum depth** of the decision tree, or **running short of samples** on the node, or the $ m $ features drawn are not able to split the samples (the samples are identical with respect to the features).
 
 2. The process is repeated for the specified number of trees.
 
@@ -146,7 +146,7 @@ Here are the results presented in the article:
 
 Test errors in percentage.
 
-The test set is 10% of the original dataset, drawn randomly. There is no limit of depth of the trees, so i put \( depth = log_2(N) +1=11 \) (more leaves possible than samples). The number of trees is 100. max_features is set to 1 (for the colunm “Forest-RI single input). max_sample_split and min_samples_leaf are not mentionned so they are set to their minimimu values.
+The test set is 10% of the original dataset, drawn randomly. There is no limit of depth of the trees, so i put $ depth = log_2(N) +1=11 $ (more leaves possible than samples). The number of trees is 100. max_features is set to 1 (for the colunm “Forest-RI single input). max_sample_split and min_samples_leaf are not mentionned so they are set to their minimimu values.
 
 Here are the results of he Random Forest Classifier from sklearn, my custom Random Forest Classifier, and a single custom Decision Tree Classifier compared to the benchmark.
 
